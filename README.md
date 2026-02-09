@@ -32,40 +32,6 @@ This repository is intended for interview review, reproducibility, and future pe
 
 ---
 
-# Repository Structure
-
-ASPred/
-│
-├── src/ # Core training & inference code
-│ ├── optimize_f1_early_stop.py
-│ ├── metrics_all_models_loss.py
-│ ├── inference.py
-│ └── data_utils.py
-│
-├── scripts/ # SLURM automation
-│ └── slurm_template_generator.sh
-│
-├── datasets/ # train/test CSVs for each antigen × chain type
-│ ├── FLU_heavy/
-│ ├── FLU_light/
-│ ├── HIV_heavy/
-│ ├── HIV_light/
-│ ├── SARS_heavy/
-│ ├── SARS_light/
-│ └── README.md # dataset schema & examples
-│
-├── configs/ # model & training configuration templates
-│ ├── model_8M.yaml
-│ ├── model_650M.yaml
-│ └── training_defaults.yaml
-│
-├── notebooks/ # demonstration notebooks
-│ └── ASPred_Usage_Demo.ipynb
-│
-├── results/ # example plots / metrics (optional)
-│
-└── README.md # this file
-
 # Dataset Format
 
 Each dataset folder corresponds to a particular **antigen** and **BCR chain type**:
@@ -131,4 +97,5 @@ sbatch scripts/train_FLU_heavy.sh
 ##Inference is performed with:
 
 src/inference.py
+
 
