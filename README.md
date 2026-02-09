@@ -22,7 +22,7 @@ This repository is intended for interview review, reproducibility, and future pe
 
 ## Features
 
-- **LoRA fine-tuning** on ESM-2 8M or 650M  
+- **LoRA fine-tuning** on ESM-2 8M or ESM-2 650M  
 - **Optuna hyperparameter search** (learning rate, batch size, LoRA ranks, dropout, etc.)  
 - **Multi-antigen** (FLU, HIV, SARS-CoV-2)  
 - **Multi-chain** (heavy, light, stacked heavy+light)  
@@ -97,5 +97,6 @@ sbatch scripts/train_FLU_heavy.sh
 ##Inference is performed with:
 
 src/inference.py
+
 
 
